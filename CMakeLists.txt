@@ -8,4 +8,4 @@ project(
 
 set( CMAKE_CXX_STANDARD 20 )
 
-add_executable( ${PROJECT_NAME} main.cpp src/${PROJECT_NAME}/integer.cpp )
+add_executable( ${PROJECT_NAME} tests/main.cpp src/${PROJECT_NAME}/integer.cpp )
