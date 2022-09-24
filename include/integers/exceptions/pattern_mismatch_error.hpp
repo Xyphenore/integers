@@ -1,0 +1,8 @@
+//
+// Created by Xyf on 18/09/2022.
+//
+
+#ifndef PATTERN_MISMATCH_ERROR_HPP
+#define PATTERN_MISMATCH_ERROR_HPP
+
+#endif //PATTERN_MISMATCH_ERROR_HPP

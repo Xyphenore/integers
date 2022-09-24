@@ -1,0 +1,8 @@
+//
+// Created by Xyf on 18/09/2022.
+//
+
+#ifndef INVALID_NUMBER_ERROR_HPP
+#define INVALID_NUMBER_ERROR_HPP
+
+#endif //INVALID_NUMBER_ERROR_HPP
