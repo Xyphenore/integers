@@ -1,28 +1,32 @@
 include( GNUInstallDirs )
 
-if(DEFINED CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
+if ( DEFINED CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT )
     message(
         STATUS
         "CMAKE_INSTALL_PREFIX is not set\n"
         "Default value: ${CMAKE_INSTALL_PREFIX}\n"
         "Will set it to ${CMAKE_SOURCE_DIR}/install"
     )
-    set(CMAKE_INSTALL_PREFIX
+    set(
+        CMAKE_INSTALL_PREFIX
         "${CMAKE_SOURCE_DIR}/install"
         CACHE PATH "Where the library will be installed to" FORCE
     )
-else()
+
+else ()
     message(
         STATUS
         "CMAKE_INSTALL_PREFIX was already set\n"
         "Current value: ${CMAKE_INSTALL_PREFIX}"
     )
-endif()
+
+endif ()
 
 set_target_properties( ${PROJECT_NAME} PROPERTIES PUBLIC_HEADERS "${public_headers}" )
 set_target_properties( ${PROJECT_NAME} PROPERTIES DEBUG_POSTFIX "d" )
 
-install( TARGETS ${PROJECT_NAME}
+install(
+    TARGETS ${PROJECT_NAME}
     EXPORT "${PROJECT_NAME}Targets"
     PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME} # include/Integers
     INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR} # include
@@ -35,7 +39,7 @@ install(
     DESTINATION cmake
 )
 
-include(CMakePackageConfigHelpers)
+include( CMakePackageConfigHelpers )
 
 # generate the version file for the config file
 write_basic_package_version_file(
