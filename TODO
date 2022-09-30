@@ -1,23 +1,22 @@
 Mettre en place la génération de la doc via cmake
 doxygen version 1.9.5 minimum car la config est faite pour cette version
 prérequis sur dot, graphviz, clang, tex, pdflatex
+Mettre en place dans cmake la récupération des images prérequis par la doc
+Cmake doit récupérer un clone du git de doxygen awesome css puis checkout en v2.1.0, le tous dans le dossier
+ressources/docs/doxygen-awesome-css
 
-Faire les alias pour les nouveaux @
+Faire les alias pour les nouveaux @arg
 Faire le mapping des extensions de fichiers
 Faire les paramètres des graphes uml générés
-
 Faire des groupes doxygen
 
 Tester les thèmes css de la doc
-
 Tester la doc générée
 
 Terminer la doc
 
 Tester la lib
 
-Faire la génération de la lib
-
-Mettre en place dans cmake la récupération des images prérequis par la doc
+Faire la génération de la lib via cmake
 
 Faire un logo pour le projet
