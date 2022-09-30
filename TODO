@@ -1,0 +1,21 @@
+Mettre en place la génération de la doc via cmake
+doxygen version 1.9.5 minimum car la config est faite pour cette version
+prérequis sur dot, graphviz, clang, tex, pdflatex
+
+Faire les alias de @exceptsafe et des autres
+Faire le mapping des extensions de fichiers
+Faire les paramètres des graphes uml générés
+
+Faire des groupes doxygen
+
+Tester les thèmes css de la doc
+
+Tester la doc générée
+
+Terminer la doc
+
+Tester la lib
+
+Faire la génération de la lib
+
+Mettre en place dans cmake la récupération des images prérequis par la doc
