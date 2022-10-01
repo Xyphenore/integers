@@ -21,16 +21,59 @@
 
 #include <concepts>
 
-namespace integers::concepts {
-template <class Object>
-concept SignedObject = std::is_signed_v<Object>;
+namespace integers {
+/**
+ * All concepts of the library @c integers.
+ *
+ * @version 1.0.0
+ * @since 1.0.0
+ * @authors Xyphenore
+ *
+ * @see integers::Integer
+ * @see integers::concepts::SignedInteger
+ */
+namespace concepts {
 
-template <class Object>
-concept IntegralObject = std::is_integral_v<Object>;
+/**
+ * A signed type concept.
+ *
+ * @tparam T Any signed type.
+ *
+ * @version 1.0.0
+ * @since 1.0.0
+ *
+ * @see integers::concepts::SignedInteger
+ */
+template <typename T>
+concept SignedType = std::is_signed_v<T>;
 
-template <class IntegerType>
-concept SignedInteger = IntegralObject<IntegerType> && SignedObject<IntegerType>;
+/**
+ * An integral type concept.
+ *
+ * @tparam T Any integral type.
+ *
+ * @version 1.0.0
+ * @since 1.0.0
+ *
+ * @see integers::concepts::SignedInteger
+ */
+template <typename T>
+concept IntegralType = std::is_integral_v<T>;
 
-}  // namespace integers::concepts
+/**
+ * A signed integral type concept.
+ *
+ * @tparam T Any signed integral type.
+ *
+ * @version 1.0.0
+ * @since 1.0.0
+ *
+ * @see integers::Integer
+ */
+template <typename IntegerType>
+concept SignedInteger = IntegralType<IntegerType> && SignedType<IntegerType>;
+
+}  // namespace concepts
+}  // namespace integers
 
 #endif  // INTEGERS_CONCEPTS_SIGNED_INTEGER_HPP
