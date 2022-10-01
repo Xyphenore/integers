@@ -70,8 +70,8 @@ concept IntegralType = std::is_integral_v<T>;
  *
  * @see integers::Integer
  */
-template <typename IntegerType>
-concept SignedInteger = IntegralType<IntegerType> && SignedType<IntegerType>;
+template <typename T>
+concept SignedInteger = IntegralType<T> && SignedType<T>;
 
 }  // namespace concepts
 }  // namespace integers
