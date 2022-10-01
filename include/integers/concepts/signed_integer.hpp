@@ -23,7 +23,7 @@
 
 namespace integers {
 /**
- * All concepts of the library @c integers.
+ * All concepts of the library @c integers .
  *
  * @version 1.0.0
  * @since 1.0.0
