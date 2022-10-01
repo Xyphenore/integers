@@ -36,3 +36,4 @@
 
 # Build directory of Intellij
 cmake-build-*
+.git/
