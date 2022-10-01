@@ -13,6 +13,6 @@ concept IntegralObject = std::is_integral_v<Object>;
 template <class IntegerType>
 concept SignedInteger = IntegralObject<IntegerType> && SignedObject<IntegerType>;
 
-} // namespace integers::concepts
+}  // namespace integers::concepts
 
-#endif // INTEGERS_CONCEPTS_SIGNED_INTEGER_HPP
+#endif  // INTEGERS_CONCEPTS_SIGNED_INTEGER_HPP
