@@ -19,6 +19,7 @@
 #ifndef INTEGERS_CONCEPTS_SIGNED_INTEGER_HPP
 #define INTEGERS_CONCEPTS_SIGNED_INTEGER_HPP
 
+#include <compare>
 #include <concepts>
 
 namespace integers {
@@ -34,9 +35,9 @@ namespace integers {
  */
 namespace concepts {
 /**
- * A regular signed integral and totally ordered.
+ * A regular signed integral and three-way-comparable.
  *
- * @tparam T Any regular signed integral and totally ordered type.
+ * @tparam T Any regular signed integral and three-way-comparable.
  *
  * @version 1.0.0
  * @since 1.0.0
@@ -44,7 +45,7 @@ namespace concepts {
  * @see integers::Integer
  */
 template <typename T>
-concept SignedInteger = std::signed_integral<T> && std::totally_ordered<T> && std::regular<T>;
+concept SignedInteger = std::signed_integral<T> && std::three_way_comparable<T> && std::regular<T>;
 
 }  // namespace concepts
 }  // namespace integers
