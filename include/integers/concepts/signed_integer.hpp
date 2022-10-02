@@ -33,37 +33,10 @@ namespace integers {
  * @see integers::concepts::SignedInteger
  */
 namespace concepts {
-
 /**
- * A signed type concept.
+ * A regular signed integral and totally ordered.
  *
- * @tparam T Any signed type.
- *
- * @version 1.0.0
- * @since 1.0.0
- *
- * @see integers::concepts::SignedInteger
- */
-template <typename T>
-concept SignedType = std::is_signed_v<T>;
-
-/**
- * An integral type concept.
- *
- * @tparam T Any integral type.
- *
- * @version 1.0.0
- * @since 1.0.0
- *
- * @see integers::concepts::SignedInteger
- */
-template <typename T>
-concept IntegralType = std::is_integral_v<T>;
-
-/**
- * A signed integral type concept.
- *
- * @tparam T Any signed integral type.
+ * @tparam T Any regular signed integral and totally ordered type.
  *
  * @version 1.0.0
  * @since 1.0.0
@@ -71,7 +44,7 @@ concept IntegralType = std::is_integral_v<T>;
  * @see integers::Integer
  */
 template <typename T>
-concept SignedInteger = IntegralType<T> && SignedType<T>;
+concept SignedInteger = std::signed_integral<T> && std::totally_ordered<T> && std::regular<T>;
 
 }  // namespace concepts
 }  // namespace integers
